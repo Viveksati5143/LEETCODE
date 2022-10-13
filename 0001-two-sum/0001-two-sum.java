@@ -14,7 +14,7 @@ class Solution {
 //     }
 // }
 //Hashmap to reduce time complexity
-        HashMap<Integer, Integer> num_map = new HashMap<>();
+        Map<Integer, Integer> num_map = new HashMap<>();
         for(int i=0;i<nums.length;i++){
             int complement = target - nums[i];
             if(num_map.containsKey(complement)){
