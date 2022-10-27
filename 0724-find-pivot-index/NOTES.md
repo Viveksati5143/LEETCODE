@@ -1,1 +1,1 @@
-​
+Total=rsumrsum- lsum
