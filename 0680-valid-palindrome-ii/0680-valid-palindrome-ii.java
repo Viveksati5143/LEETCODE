@@ -7,8 +7,7 @@ class Solution {
          {
              return isPalindrome(s,i+1,j) || isPalindrome(s,i,j-1);
          }
-         i++;
-         j--;
+         i++;j--;
       }
       return true;
     }
@@ -17,8 +16,7 @@ class Solution {
     {
         while(i<j){
          if(s.charAt(i)!=s.charAt(j))return false;
-         i++;
-         j--;
+         i++;j--;
      }
      return true;
    }
