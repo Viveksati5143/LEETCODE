@@ -4,14 +4,12 @@ class Solution {
         dfs(new ArrayList<>(), new boolean[letters.length], res, letters);
         return res;
     }
-
     private static void dfs(List<Integer> path, boolean[] used, List<List<Integer>> res, int[] letters) {
         if (path.size() == used.length) {
-            // make a deep copy since otherwise we'd be append the same list over and over
+            // make a deep copy otherwise we'd be append the same list over and over
             res.add(new ArrayList<Integer>(path));
             return;
         }
-
         for (int i = 0; i < used.length; i++) {
             // skip used letters
             if (used[i]) continue;
