@@ -1,25 +1,19 @@
 class Solution {
-    public List<List<Integer>> permute(int[] letters) {
-        List<List<Integer>> res = new ArrayList<>();
-        dfs(new ArrayList<>(), new boolean[letters.length], res, letters);
+    public List<List<Integer>> permute(int[] nums) {
+        List<List<Integer>> res = new ArrayList<>(); //Powerset       
+        Permutations(nums,new ArrayList(),res);
         return res;
     }
-    private static void dfs(List<Integer> path, boolean[] used, List<List<Integer>> res, int[] letters) {
-        if (path.size() == used.length) {
-            // make a deep copy otherwise we'd be append the same list over and over
-            res.add(new ArrayList<Integer>(path));
-            return;
-        }
-        for (int i = 0; i < used.length; i++) {
-            // skip used letters
-            if (used[i]) continue;
-            // add letter to permutation, mark letter as used
-            path.add(letters[i]);
-            used[i] = true;
-            dfs(path, used, res, letters);
-            // remove letter from permutation, mark letter as unused
-            path.remove(path.size() - 1);
-            used[i] = false;
-        }
-    }    
+    
+    void Permutations(int[] nums,List<Integer> curr,List<List<Integer>> res){
+        if(curr.size()==nums.length) res.add(new ArrayList(curr));//[]
+        else{
+            for(int n=0;n<nums.length;n++){//1,2,3
+                if(curr.contains(nums[n])) continue;
+                curr.add(nums[n]);
+                Permutations(nums,curr,res);//-------
+                curr.remove(curr.size()-1);
+            }
+        }       
+    }
 }
