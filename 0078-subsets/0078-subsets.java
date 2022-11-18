@@ -1,6 +1,6 @@
 class Solution {
     public List<List<Integer>> subsets(int[] nums) {
-        List<List<Integer>> res = new ArrayList();//result         
+        List<List<Integer>> res = new ArrayList();//PowerSet         
         generateSubsets(0,nums,new ArrayList(),res);
         return res;            
     }  
