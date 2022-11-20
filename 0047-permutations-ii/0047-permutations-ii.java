@@ -4,8 +4,7 @@ class Solution {
         Arrays.sort(nums);
         Permutations(nums,new ArrayList(),res, new boolean[nums.length]);
         return res;
-    }
-    
+    }    
     void Permutations(int[] nums,List<Integer> curr,List<List<Integer>> res,boolean [] used){
         if(curr.size()==nums.length) res.add(new ArrayList(curr));//[]
         else{
