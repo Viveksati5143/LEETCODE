@@ -12,7 +12,7 @@ class Solution {
                 if(used[n] || n > 0 && nums[n] == nums[n-1] && !used[n - 1]) continue;
                 used[n]=true;
                 curr.add(nums[n]);
-                Permutations(nums,curr,res,used);//-------
+                Permutations(nums,curr,res,used);//-----
                 used[n]=false;
                 curr.remove(curr.size()-1);
             }
