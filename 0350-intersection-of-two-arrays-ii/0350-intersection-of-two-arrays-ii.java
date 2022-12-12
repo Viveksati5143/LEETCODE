@@ -7,7 +7,7 @@ class Solution {
 	List<Integer> res = new ArrayList<>();
 
 	while (true){
-		if (top >= nums1.length || bottom >= nums2.length)break;
+		if (top >= nums1.length || bottom >= nums2.length) break;
 		if (nums1[top] == nums2[bottom]){
 			res.add(nums1[top]);
 			top ++;
