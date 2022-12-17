@@ -10,7 +10,7 @@ class Solution {
             }
 			else{
                 S.append("al");
-                // i = i + 3;
+                i++;
             }
 		}
 	}
