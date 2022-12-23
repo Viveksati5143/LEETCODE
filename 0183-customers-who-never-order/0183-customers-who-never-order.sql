@@ -1,8 +1,5 @@
-select name 
-as Customers 
+select name as Customers 
 from customers 
-where id 
-not in(
+where id not in(
     select CustomerId
-    from orders
-);
+    from orders);
