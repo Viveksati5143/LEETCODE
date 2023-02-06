@@ -12,16 +12,13 @@ class MyQueue {
         while(!stack2.isEmpty()){
             stack1.push(stack2.pop());
         }
-    }
-    
+    }    
     public int pop(){
         return stack1.pop();
-    }
-    
+    }    
     public int peek(){
         return stack1.peek();
-    }
-    
+    }    
     public boolean empty(){
         return stack1.isEmpty();
     }
