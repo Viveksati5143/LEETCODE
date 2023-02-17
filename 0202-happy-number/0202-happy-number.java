@@ -14,6 +14,6 @@ class Solution {
             slow=op(slow);
             fast=op(op(fast));
         }
-        return(slow==1);
+        return(slow == 1);
     }
 }
