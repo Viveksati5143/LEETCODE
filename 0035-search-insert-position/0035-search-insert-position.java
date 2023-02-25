@@ -6,7 +6,7 @@ class Solution {
             int mid = s + (end - s)/2;
             if(nums[mid] == target ) return mid;
             else if(nums[mid] < target) s = mid+1;
-            else end = end-1;
+            else end = mid-1;
         }
         return s;        
     }
