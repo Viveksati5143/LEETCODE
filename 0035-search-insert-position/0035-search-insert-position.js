@@ -1,13 +1,9 @@
-class Solution {
-    public int searchInsert(int[] nums, int target) {
-        int s = 0;
-        int end = nums.length -1;
-        while(s <= end){
-            int mid = s + (end - s)/2;
-            if(nums[mid] == target ) return mid;
-            else if(nums[mid] < target) s = mid+1;
-            else end = mid-1;
-        }
-        return s;        
+var searchInsert = function(nums, target) {
+    let s = 0, e = nums.length;
+    while(s < e) { 
+        let m = s + Math.floor((e-s)/2); 
+        if (target > nums[m]) s = m + 1
+        else e = m
     }
-}
+    return s;
+};
