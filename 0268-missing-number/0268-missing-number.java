@@ -8,9 +8,9 @@ class Solution {
         }
         
         for(int index = 0; index < nums.length; index++){
-            if(nums[index]!= index) return index;
+            if(nums[index]!= index) return index; //since cyclic sort os it should be equal
         }
-        return nums.length;
+        return nums.length; //n value
     }
     
     void swap(int[] arr, int first, int last){
