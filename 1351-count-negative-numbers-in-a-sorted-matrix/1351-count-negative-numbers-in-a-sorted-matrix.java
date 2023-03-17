@@ -5,7 +5,7 @@ class Solution {
             if (grid[r][c] < 0){
                 --r;
                 count += n-c;
-            }else ++c;
+            } else ++c;
         }
         return count;
     }
