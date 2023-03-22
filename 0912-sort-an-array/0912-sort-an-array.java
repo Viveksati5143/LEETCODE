@@ -3,7 +3,7 @@ class Solution {
         mergeSortInPlace(arr, 0, arr.length);
         return arr;
     }
-    static void mergeSortInPlace(int[] arr, int s, int e){
+    void mergeSortInPlace(int[] arr, int s, int e){
         if (e-s==1) return;
 
         int mid = (s+e)/2;
@@ -12,7 +12,7 @@ class Solution {
         mergeInPlace(arr, s, mid, e);
     }
 
-    static void mergeInPlace(int[] arr, int s, int m, int e){
+    void mergeInPlace(int[] arr, int s, int m, int e){
         int [] mix = new int[e-s];
         int i=s, j=m, k=0;
         while (i<m && j<e){
