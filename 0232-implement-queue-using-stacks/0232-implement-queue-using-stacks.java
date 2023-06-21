@@ -8,45 +8,35 @@ class MyQueue {
     }
     
     public void push(int x) {
-        // first.push(x);        
-        while(!first.isEmpty()){
-            second.push(first.pop());
-        }
         first.push(x);
-        while(!second.isEmpty()){
-            first.push(second.pop());
-        }
     }
     
     public int pop() {
-        return first.pop();
-        // while(!first.isEmpty()){
-        //     second.push(first.pop());
-        // }
-        // int removed = second.pop();
-        // while(!second.isEmpty()){
-        //     first.push(second.pop());
-        // }
-        // return removed;
+        while(!first.isEmpty()){
+            second.push(first.pop());
+        }
+        int removed = second.pop();
+        while(!second.isEmpty()){
+            first.push(second.pop());
+        }
+        return removed;
     }
     
     public int peek() {
-        return first.peek();
-        // while(!first.isEmpty()){
-        //     second.push(first.pop());
-        // }
-        // int peeked = second.peek();
-        // while(!second.isEmpty()){
-        //     first.push(second.pop());
-        // }
-        // return peeked;
+        while(!first.isEmpty()){
+            second.push(first.pop());
+        }
+        int peeked = second.peek();
+        while(!second.isEmpty()){
+            first.push(second.pop());
+        }
+        return peeked;
     }
     
     public boolean empty() {
         return first.isEmpty();
     }
 }
-
 /**
  * Your MyQueue object will be instantiated and called as such:
  * MyQueue obj = new MyQueue();
